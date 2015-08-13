@@ -1,0 +1,9 @@
+import os
+class Monitor:
+      def monitor(self):
+          return os.popen("ps -ef|grep java").read
+      def processMonitor(self):
+          monitorInfo = self.monitor()
+          print monitorInfo
+monitor = new Monitor()
+monitor.processMonitor()
